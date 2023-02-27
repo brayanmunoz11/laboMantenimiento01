@@ -27,3 +27,4 @@ public class ChessMain{
         frame.setVisible( true );
     }
 }
+
