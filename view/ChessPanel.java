@@ -1,8 +1,8 @@
-package src.view;
+package view;
 import java.awt.*;
 import javax.swing.*;
 
-import src.model.ChessGameBoard;
+import model.ChessGameBoard;
 // -------------------------------------------------------------------------
 /**
  * The main panel of the Chess game.

@@ -1,4 +1,4 @@
-package src.model;
+package model;
 import javax.swing.ImageIcon;
 import java.util.ArrayList;
 // -------------------------------------------------------------------------
