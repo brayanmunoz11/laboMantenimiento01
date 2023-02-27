@@ -1,4 +1,4 @@
-package src.View;
+package src.view;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import java.util.Date;

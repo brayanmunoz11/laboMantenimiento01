@@ -1,11 +1,11 @@
-package src.Model;
+package src.model;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
-import src.View.ChessGameEngine;
-import src.View.ChessGraveyard;
-import src.View.ChessPanel;
+import src.view.ChessGameEngine;
+import src.view.ChessGraveyard;
+import src.view.ChessPanel;
 // -------------------------------------------------------------------------
 /**
  * Abstract class that is used to represent a game piece on the chess board.

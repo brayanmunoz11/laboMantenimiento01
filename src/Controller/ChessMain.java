@@ -1,7 +1,7 @@
-package src.Controller;
+package src.controller;
 import javax.swing.*;
 
-import src.View.ChessPanel;
+import src.view.ChessPanel;
 // -------------------------------------------------------------------------
 /**
  * Shows the GUI for the Chess game.
@@ -21,7 +21,7 @@ public class ChessMain{
      */
     public static void main( String[] args ){
         JFrame frame = new JFrame( "YetAnotherChessGame 1.0" );
-        frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        frame.setDefaultCloseOperation( javax.swing.WindowConstants.EXIT_ON_CLOSE );
         frame.getContentPane().add( new ChessPanel() );
         frame.pack();
         frame.setVisible( true );
