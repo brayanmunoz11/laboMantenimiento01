@@ -1,8 +1,13 @@
+package src.Model;
 import java.util.ArrayList;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.Color;
 import javax.swing.JPanel;
+
+import src.View.BoardSquare;
+import src.View.ChessPanel;
+
 import java.awt.GridLayout;
 // -------------------------------------------------------------------------
 /**

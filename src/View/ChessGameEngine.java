@@ -1,6 +1,11 @@
+package src.View;
 import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+
+import src.Model.ChessGameBoard;
+import src.Model.ChessGamePiece;
+import src.Model.King;
 import java.awt.event.MouseEvent;
 // -------------------------------------------------------------------------
 /**

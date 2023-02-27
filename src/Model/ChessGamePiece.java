@@ -1,6 +1,11 @@
+package src.Model;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+
+import src.View.ChessGameEngine;
+import src.View.ChessGraveyard;
+import src.View.ChessPanel;
 // -------------------------------------------------------------------------
 /**
  * Abstract class that is used to represent a game piece on the chess board.
@@ -33,11 +38,11 @@ public abstract class ChessGamePiece{
     /**
      * Represents a black piece as an int
      */
-    static final int            BLACK      = 0;
+    public static final int            BLACK      = 0;
     /**
      * Represents a white piece as an int
      */
-    static final int            WHITE      = 1;
+    public static final int            WHITE      = 1;
     /**
      * Represents a piece that has not been assigned a color
      */

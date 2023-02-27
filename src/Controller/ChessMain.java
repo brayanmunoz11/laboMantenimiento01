@@ -1,4 +1,7 @@
+package src.Controller;
 import javax.swing.*;
+
+import src.View.ChessPanel;
 // -------------------------------------------------------------------------
 /**
  * Shows the GUI for the Chess game.
