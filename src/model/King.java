@@ -1,4 +1,4 @@
-package src.Model;
+package model;
 import javax.swing.ImageIcon;
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class King
         ArrayList<String> southMoves = calculateSouthMoves( board, 1 );
         ArrayList<String> eastMoves = calculateEastMoves( board, 1 );
         ArrayList<String> westMoves = calculateWestMoves( board, 1 );
-        ArrayList<String> allMoves = new ArrayList<String>();
+        ArrayList<String> allMoves = new ArrayList<>();
         allMoves.addAll( northEastMoves );
         allMoves.addAll( northWestMoves );
         allMoves.addAll( southWestMoves );
@@ -32,26 +32,24 @@ public class King
     }
    
     public boolean isChecked( ChessGameBoard board ){
-        return getCurrentAttackers( board ).size() > 0;
+        return !getCurrentAttackers( board ).isEmpty();
     }
 
     @Override
     public ImageIcon createImageByPieceType(){
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/WhiteKing.gif")
-            );            
-        }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/BlackKing.gif" )
-            );            
-        }
-        else
-        {
-            return new ImageIcon(
-                getClass().getResource("chessImages/default-Unassigned.gif" )
-            );            
+        switch (getColorOfPiece()) {
+            case ChessGamePiece.WHITE:
+                return new ImageIcon(
+                        getClass().getResource("chessImages/WhiteKing.gif")
+                );
+            case ChessGamePiece.BLACK:
+                return new ImageIcon(
+                        getClass().getResource("chessImages/BlackKing.gif" )
+                );
+            default:
+                return new ImageIcon(
+                        getClass().getResource("chessImages/default-Unassigned.gif" )
+                );            
         }
     }
 }

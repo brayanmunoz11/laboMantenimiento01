@@ -1,8 +1,8 @@
-package src.View;
+package view;
 import java.awt.GridLayout;
 import javax.swing.*;
 
-import src.Model.ChessGamePiece;
+import model.ChessGamePiece;
 // -------------------------------------------------------------------------
 /**
  * Represents the graveyard where pieces lie after being captured.
@@ -14,7 +14,7 @@ import src.Model.ChessGamePiece;
  */
 public class ChessGraveyard
     extends JPanel{
-    private String title;
+    private final String title;
     // ----------------------------------------------------------
     /**
      * Create a new ChessGraveyard object.

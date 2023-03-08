@@ -1,11 +1,11 @@
-package src.View;
+package view;
 import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
-import src.Model.ChessGameBoard;
-import src.Model.ChessGamePiece;
-import src.Model.King;
+import model.ChessGameBoard;
+import model.ChessGamePiece;
+import model.King;
 import java.awt.event.MouseEvent;
 // -------------------------------------------------------------------------
 /**
@@ -21,7 +21,7 @@ public class ChessGameEngine{
     private ChessGamePiece currentPiece;
     private boolean        firstClick;
     private int            currentPlayer;
-    private ChessGameBoard board;
+    private final ChessGameBoard board;
     private King           king1;
     private King           king2;
     // ----------------------------------------------------------
@@ -89,15 +89,15 @@ public class ChessGameEngine{
      */
     public boolean playerHasLegalMoves( int playerNum ){
         ArrayList<ChessGamePiece> pieces;
-        if ( playerNum == 1 ){
-            pieces = board.getAllWhitePieces();
-        }
-        else if ( playerNum == 2 ){
-            pieces = board.getAllBlackPieces();
-        }
-        else
-        {
-            return false;
+        switch (playerNum) {
+            case 1:
+                pieces = board.getAllWhitePieces();
+                break;
+            case 2:
+                pieces = board.getAllBlackPieces();
+                break;
+            default:
+                return false;
         }
         for ( ChessGamePiece currPiece : pieces ){
             if ( currPiece.hasLegalMoves( board ) ){
@@ -118,18 +118,12 @@ public class ChessGameEngine{
         }
         if ( currentPlayer == 2 ) // black player
         {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
-                return true;
-            }
-            return false;
+            return currentPiece.getColorOfPiece() == ChessGamePiece.BLACK;
         }
         else
         // white player
         {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
-                return true;
-            }
-            return false;
+            return currentPiece.getColorOfPiece() == ChessGamePiece.WHITE;
         }
     }
     /**

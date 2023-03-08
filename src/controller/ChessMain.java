@@ -1,7 +1,7 @@
-package src.Controller;
+package controller;
 import javax.swing.*;
 
-import src.View.ChessPanel;
+import view.ChessPanel;
 
 public class ChessMain{
 

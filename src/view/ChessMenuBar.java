@@ -1,4 +1,4 @@
-package src.View;
+package view;
 import java.awt.Component;
 import java.awt.event.*;
 import javax.swing.*;
@@ -25,8 +25,8 @@ public class ChessMenuBar
         for ( int i = 0; i < menuCategories.length; i++ ){
             JMenu currMenu = new JMenu( menuCategories[i] );
             String[] currMenuItemList = menuItemLists[i].split( "," );
-            for ( int j = 0; j < currMenuItemList.length; j++ ){
-                JMenuItem currItem = new JMenuItem( currMenuItemList[j] );
+            for (String currMenuItemList1 : currMenuItemList) {
+                JMenuItem currItem = new JMenuItem(currMenuItemList1);
                 currItem.addActionListener( new MenuListener() );
                 currMenu.add( currItem );
             }

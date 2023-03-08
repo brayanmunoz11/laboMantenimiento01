@@ -1,11 +1,11 @@
-package src.Model;
+package model;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
-import src.View.ChessGameEngine;
-import src.View.ChessGraveyard;
-import src.View.ChessPanel;
+import view.ChessGameEngine;
+import view.ChessGraveyard;
+import view.ChessPanel;
 
 public abstract class ChessGamePiece{
     private boolean             skipMoveGeneration;
@@ -65,7 +65,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateSouthMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = pieceRow + 1; i < 8 && count < numMoves; i++ ){
@@ -89,7 +89,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateNorthMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = pieceRow - 1; i >= 0 && count < numMoves; i-- ){
@@ -113,7 +113,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateEastMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = pieceColumn + 1; i < 8 && count < numMoves; i++ ){
@@ -137,7 +137,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateWestMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = pieceColumn - 1; i >= 0 && count < numMoves; i-- ){
@@ -161,7 +161,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateNorthWestMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = 1; i < 8 && count < numMoves; i++ ){
@@ -188,7 +188,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateNorthEastMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = 1; i < 8 && count < numMoves; i++ ){
@@ -215,7 +215,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateSouthWestMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = 1; i < 8 && count < numMoves; i++ ){
@@ -242,7 +242,7 @@ public abstract class ChessGamePiece{
     protected ArrayList<String> calculateSouthEastMoves(
         ChessGameBoard board,
         int numMoves ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         int count = 0;
         if ( isPieceOnScreen() ){
             for ( int i = 1; i < 8 && count < numMoves; i++ ){
@@ -277,13 +277,7 @@ public abstract class ChessGamePiece{
     }
    
     public boolean isOnScreen( int row, int col ){
-        if ( row >= 0 && row <= 7 && col >= 0 && col <= 7 ){
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return row >= 0 && row <= 7 && col >= 0 && col <= 7;
     }
    
     public boolean isPieceOnScreen(){
@@ -427,28 +421,16 @@ public abstract class ChessGamePiece{
             return false;
         }
         if ( this.getColorOfPiece() == ChessGamePiece.WHITE ){
-            if ( enemyPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return enemyPiece.getColorOfPiece() == ChessGamePiece.BLACK;
         }
         else
         {
-            if ( enemyPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return enemyPiece.getColorOfPiece() == ChessGamePiece.WHITE;
         }
     }
    
     public ArrayList<ChessGamePiece> getCurrentAttackers( ChessGameBoard board ){
-        ArrayList<ChessGamePiece> attackers = new ArrayList<ChessGamePiece>();
+        ArrayList<ChessGamePiece> attackers = new ArrayList<>();
         int enemyColor =
             ( this.getColorOfPiece() == ChessGamePiece.BLACK )
                 ? ChessGamePiece.WHITE

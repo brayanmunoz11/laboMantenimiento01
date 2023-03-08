@@ -1,4 +1,4 @@
-package src.View;
+package view;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import java.util.Date;
@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class ChessGameLog
     extends JScrollPane{
-    private JTextArea textArea;
+    private final JTextArea textArea;
     // ----------------------------------------------------------
     /**
      * Create a new ChessGameLog object.
