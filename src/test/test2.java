@@ -15,6 +15,57 @@ import model.Rook;
 public class test2 {
 
     @Test
+    public void testModelRook(){
+        
+        System.out.println("TEST ROOK");
+        ChessGamePiece pieceToAddBlack;
+        ChessGameBoard board = new ChessGameBoard(); 
+        pieceToAddBlack = new Rook( board, 0, 0, 0 );
+        System.out.println("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+
+        ChessGamePiece pieceToAddWhite;
+        pieceToAddWhite = new Bishop( board, 0, 0, 1 );
+        System.out.println("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+
+
+        Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
+    }
+
+    @Test
+    public void testModelQueen(){
+        
+        System.out.println("TEST QUEEN");
+        ChessGamePiece pieceToAddBlack;
+        ChessGameBoard board = new ChessGameBoard(); 
+        pieceToAddBlack = new Queen( board, 0, 0, 0 );
+        System.out.println("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+
+        ChessGamePiece pieceToAddWhite;
+        pieceToAddWhite = new Bishop( board, 0, 0, 1 );
+        System.out.println("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+
+
+        Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
+    }
+
+    @Test
+    public void testModelPawn(){
+        
+        System.out.println("TEST PAWN");
+        ChessGamePiece pieceToAddBlack;
+        ChessGameBoard board = new ChessGameBoard(); 
+        pieceToAddBlack = new Pawn( board, 0, 0, 0 );
+        System.out.println("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+
+        ChessGamePiece pieceToAddWhite;
+        pieceToAddWhite = new Bishop( board, 0, 0, 1 );
+        System.out.println("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+
+
+        Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
+    }
+
+    @Test
     public void testModelBishop(){
         
         System.out.println("TEST BISHOP");
