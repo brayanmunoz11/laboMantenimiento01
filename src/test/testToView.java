@@ -12,7 +12,7 @@ import view.ChessMenuBar;
 import view.ChessPanel;
 import java.util.logging.Logger;
 
-public class test3 {
+public class testToView {
 
     private static Logger logger = Logger.getLogger("InfoLogging");
 

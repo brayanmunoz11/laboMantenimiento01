@@ -14,7 +14,7 @@ import model.Rook;
 
 import java.util.logging.Logger;
 
-public class test2 {
+public class testToModel {
 
      private static Logger logger = Logger.getLogger("InfoLogging");
 
@@ -25,11 +25,11 @@ public class test2 {
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Rook( board, 0, 0, 0 );
-        logger.info("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+        logger.info("ROOK BLACK "+ pieceToAddBlack.getColorOfPiece());
 
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Bishop( board, 0, 0, 1 );
-        logger.info("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+        logger.info("ROOK WHITE " + pieceToAddWhite.getColorOfPiece());
 
 
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
@@ -42,11 +42,11 @@ public class test2 {
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Queen( board, 0, 0, 0 );
-        logger.info("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+        logger.info("QUEEN BLACK "+ pieceToAddBlack.getColorOfPiece());
 
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Bishop( board, 0, 0, 1 );
-        logger.info("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+        logger.info("QUEEN WHITE " + pieceToAddWhite.getColorOfPiece());
 
 
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
@@ -59,11 +59,11 @@ public class test2 {
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Pawn( board, 0, 0, 0 );
-        logger.info("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+        logger.info("PAWN BLACK "+ pieceToAddBlack.getColorOfPiece());
 
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Bishop( board, 0, 0, 1 );
-        logger.info("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+        logger.info("PAWN WHITE " + pieceToAddWhite.getColorOfPiece());
 
 
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
@@ -108,10 +108,10 @@ public class test2 {
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Knight( board, 0, 0, 0 );
-        logger.info("KING  KNIGHT"+ pieceToAddBlack.getColorOfPiece());
+        logger.info("KNIGHT  BLACK"+ pieceToAddBlack.getColorOfPiece());
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Knight( board, 0, 0, 1 );
-        logger.info("KING KNIGHT " + pieceToAddWhite.getColorOfPiece());
+        logger.info("KNIGHT WHITE " + pieceToAddWhite.getColorOfPiece());
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
     }
 
