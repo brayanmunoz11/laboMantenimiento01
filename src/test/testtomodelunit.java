@@ -14,7 +14,7 @@ import model.Rook;
 
 import java.util.logging.Logger;
 
-public class testToModel {
+public class testtomodelunit {
 
      private static Logger logger = Logger.getLogger("InfoLogging");
 

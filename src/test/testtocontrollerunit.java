@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import controller.ChessMain;
 import java.util.logging.Logger;
 
-public class testToController {
+public class testtocontrollerunit {
 
     private static Logger logger = Logger.getLogger("InfoLogging");
 
