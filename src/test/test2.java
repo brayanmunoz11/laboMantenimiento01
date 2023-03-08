@@ -12,20 +12,24 @@ import model.Pawn;
 import model.Queen;
 import model.Rook;
 
+import java.util.logging.Logger;
+
 public class test2 {
+
+    private static Logger LOGGER = Logger.getLogger("InfoLogging");
 
     @Test
     public void testModelRook(){
         
-        System.out.println("TEST ROOK");
+        LOGGER.info("TEST ROOK");
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Rook( board, 0, 0, 0 );
-        System.out.println("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+        LOGGER.info("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
 
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Bishop( board, 0, 0, 1 );
-        System.out.println("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+        LOGGER.info("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
 
 
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
@@ -34,15 +38,15 @@ public class test2 {
     @Test
     public void testModelQueen(){
         
-        System.out.println("TEST QUEEN");
+        LOGGER.info("TEST QUEEN");
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Queen( board, 0, 0, 0 );
-        System.out.println("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+        LOGGER.info("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
 
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Bishop( board, 0, 0, 1 );
-        System.out.println("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+        LOGGER.info("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
 
 
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
@@ -51,15 +55,15 @@ public class test2 {
     @Test
     public void testModelPawn(){
         
-        System.out.println("TEST PAWN");
+        LOGGER.info("TEST PAWN");
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Pawn( board, 0, 0, 0 );
-        System.out.println("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+        LOGGER.info("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
 
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Bishop( board, 0, 0, 1 );
-        System.out.println("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+        LOGGER.info("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
 
 
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
@@ -68,15 +72,15 @@ public class test2 {
     @Test
     public void testModelBishop(){
         
-        System.out.println("TEST BISHOP");
+        LOGGER.info("TEST BISHOP");
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Bishop( board, 0, 0, 0 );
-        System.out.println("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
+        LOGGER.info("BISHOP BLACK "+ pieceToAddBlack.getColorOfPiece());
 
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Bishop( board, 0, 0, 1 );
-        System.out.println("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
+        LOGGER.info("BISHOP WHITE " + pieceToAddWhite.getColorOfPiece());
 
 
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
@@ -86,46 +90,46 @@ public class test2 {
     @Test
     public void testModelKing(){
         
-        System.out.println("TEST KING");
+        LOGGER.info("TEST KING");
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new King( board, 0, 0, 0 );
-        System.out.println("KING BLACK "+ pieceToAddBlack.getColorOfPiece());
+        LOGGER.info("KING BLACK "+ pieceToAddBlack.getColorOfPiece());
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new King( board, 0, 0, 1 );
-        System.out.println("KING WHITE " + pieceToAddWhite.getColorOfPiece());
+        LOGGER.info("KING WHITE " + pieceToAddWhite.getColorOfPiece());
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
     }
 
     @Test
     public void testModelRock(){
         
-        System.out.println("TEST KNIGHT");
+        LOGGER.info("TEST KNIGHT");
         ChessGamePiece pieceToAddBlack;
         ChessGameBoard board = new ChessGameBoard(); 
         pieceToAddBlack = new Knight( board, 0, 0, 0 );
-        System.out.println("KING  KNIGHT"+ pieceToAddBlack.getColorOfPiece());
+        LOGGER.info("KING  KNIGHT"+ pieceToAddBlack.getColorOfPiece());
         ChessGamePiece pieceToAddWhite;
         pieceToAddWhite = new Knight( board, 0, 0, 1 );
-        System.out.println("KING KNIGHT " + pieceToAddWhite.getColorOfPiece());
+        LOGGER.info("KING KNIGHT " + pieceToAddWhite.getColorOfPiece());
         Assertions.assertNotEquals(pieceToAddWhite.getColorOfPiece(), pieceToAddBlack.getColorOfPiece()); 
     }
 
     @Test
     public void testModelCheessGameBoard(){
-        System.out.println("TEST CHESS GAME BOARD");
+        LOGGER.info("TEST CHESS GAME BOARD");
         ChessGameBoard boardOne = new ChessGameBoard();
         ChessGameBoard boardTwo = new ChessGameBoard();
         boardOne.setAlignmentX(3);
         boardTwo.setAlignmentX(3);
-        System.out.println("Compare setAlignmentX correct ");
+        LOGGER.info("Compare setAlignmentX correct ");
         Assertions.assertEquals(boardOne.getAlignmentX(), boardOne.getAlignmentX()); 
     }
 
 
     @Test
     public void testModelCheessGamePiece(){
-        System.out.println("TEST CHESS GAME PIECE");
+        LOGGER.info("TEST CHESS GAME PIECE");
         
         ChessGamePiece gamePiece;
 

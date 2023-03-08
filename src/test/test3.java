@@ -10,13 +10,16 @@ import view.ChessGameLog;
 import view.ChessGraveyard;
 import view.ChessMenuBar;
 import view.ChessPanel;
+import java.util.logging.Logger;
 
 public class test3 {
+
+    private static Logger LOGGER = Logger.getLogger("InfoLogging");
 
     @Test
     public void testViewBoardSquare(){
         
-        System.out.println("TEST BOARD SQUARE");
+        LOGGER.info("TEST BOARD SQUARE");
 
         ChessGameBoard board = new ChessGameBoard(); 
 
@@ -29,12 +32,11 @@ public class test3 {
         
         try{
             square = new BoardSquare(0, 0, bishop);
-            System.out.println(square);
+            LOGGER.info(""+square);
             not_fail = true;
         }catch (Exception e){
-            System.out.println("Err ,"+ e);
+            LOGGER.info("Err ,"+ e);
         }
-       
     
         Assertions.assertNotNull(square);
         Assertions.assertTrue(not_fail);; 
@@ -43,7 +45,7 @@ public class test3 {
     @Test
     public void testViewGameLog(){
         
-        System.out.println("TEST GAME LOG");
+        LOGGER.info("TEST GAME LOG");
 
         ChessGameLog LOG = new ChessGameLog();
 
@@ -62,11 +64,11 @@ public class test3 {
     @Test
     public void testViewGraveYard(){
         
-        System.out.println("TEST GRAVE YARD");
+        LOGGER.info("TEST GRAVE YARD");
 
         ChessGraveyard graveyard = new ChessGraveyard("CHESS TITAN");
 
-        System.out.println(graveyard);
+        LOGGER.info(""+graveyard);
         Assertions.assertNotNull(graveyard);
         
     }
@@ -74,11 +76,11 @@ public class test3 {
     @Test
     public void testViewMenuBar(){
         
-        System.out.println("TEST MENU BAR");
+        LOGGER.info("TEST MENU BAR");
 
         ChessMenuBar menu = new ChessMenuBar();
 
-        System.out.println(menu);
+        LOGGER.info(""+menu);
         Assertions.assertNotNull(menu);
         
     }
@@ -87,11 +89,11 @@ public class test3 {
     @Test
     public void testViewMenuPanel(){
         
-        System.out.println("TEST MENU PANEL");
+        LOGGER.info("TEST MENU PANEL");
 
         ChessPanel panel = new ChessPanel();
 
-        System.out.println(panel);
+        LOGGER.info(""+panel);
         Assertions.assertNotNull(panel);
         
     }
