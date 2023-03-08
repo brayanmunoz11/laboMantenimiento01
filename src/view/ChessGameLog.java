@@ -43,18 +43,11 @@ public class ChessGameLog
             textArea.setText( new Date() + " - " + s );
         }
     }
-    /**
-     * Clears the log.
-     */
+
     public void clearLog(){
         textArea.setText( "" );
     }
-    // ----------------------------------------------------------
-    /**
-     * Gets the most recent statement added to the log.
-     * 
-     * @return String the most recent log statement
-     */
+
     public String getLastLog(){
         int indexOfLastNewLine = textArea.getText().lastIndexOf( "\n" );
         if ( indexOfLastNewLine < 0 ){
