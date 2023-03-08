@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Assertions;
 import controller.ChessMain;
 import java.util.logging.Logger;
 
-public class testtocontrollerunit {
+public class testController {
 
     private static Logger logger = Logger.getLogger("InfoLogging");
 
     @Test
-    public void testcontroller(){
+    public void testcontrollerPage(){
         logger.info("TEST MAIN");
         boolean notFail = false;
         try {

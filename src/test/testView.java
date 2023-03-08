@@ -12,7 +12,7 @@ import view.ChessMenuBar;
 import view.ChessPanel;
 import java.util.logging.Logger;
 
-public class testtoviewunit {
+public class testView {
 
     private static Logger logger = Logger.getLogger("InfoLogging");
 
@@ -32,7 +32,6 @@ public class testtoviewunit {
         
         try{
             square = new BoardSquare(0, 0, bishop);
-            logger.info(square.toString());
             not_fail = true;
         }catch (Exception e){
             logger.info("Err ,"+ e);
@@ -68,7 +67,6 @@ public class testtoviewunit {
 
         ChessGraveyard graveyard = new ChessGraveyard("CHESS TITAN");
 
-        logger.info(graveyard.toString());
         Assertions.assertNotNull(graveyard);
         
     }
@@ -80,7 +78,6 @@ public class testtoviewunit {
 
         ChessMenuBar menu = new ChessMenuBar();
 
-        logger.info(menu.toString());
         Assertions.assertNotNull(menu);
         
     }
@@ -93,7 +90,6 @@ public class testtoviewunit {
 
         ChessPanel panel = new ChessPanel();
 
-        logger.info(panel.toString());
         Assertions.assertNotNull(panel);
         
     }
