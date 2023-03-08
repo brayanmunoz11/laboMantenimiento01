@@ -14,12 +14,12 @@ import java.util.logging.Logger;
 
 public class test3 {
 
-    private static Logger LOGGER = Logger.getLogger("InfoLogging");
+    private static Logger logger = Logger.getLogger("InfoLogging");
 
     @Test
     public void testViewBoardSquare(){
         
-        LOGGER.info("TEST BOARD SQUARE");
+        logger.info("TEST BOARD SQUARE");
 
         ChessGameBoard board = new ChessGameBoard(); 
 
@@ -32,10 +32,10 @@ public class test3 {
         
         try{
             square = new BoardSquare(0, 0, bishop);
-            LOGGER.info(""+square);
+            logger.info(square.toString());
             not_fail = true;
         }catch (Exception e){
-            LOGGER.info("Err ,"+ e);
+            logger.info("Err ,"+ e);
         }
     
         Assertions.assertNotNull(square);
@@ -45,7 +45,7 @@ public class test3 {
     @Test
     public void testViewGameLog(){
         
-        LOGGER.info("TEST GAME LOG");
+        logger.info("TEST GAME LOG");
 
         ChessGameLog LOG = new ChessGameLog();
 
@@ -64,11 +64,11 @@ public class test3 {
     @Test
     public void testViewGraveYard(){
         
-        LOGGER.info("TEST GRAVE YARD");
+        logger.info("TEST GRAVE YARD");
 
         ChessGraveyard graveyard = new ChessGraveyard("CHESS TITAN");
 
-        LOGGER.info(""+graveyard);
+        logger.info(graveyard.toString());
         Assertions.assertNotNull(graveyard);
         
     }
@@ -76,11 +76,11 @@ public class test3 {
     @Test
     public void testViewMenuBar(){
         
-        LOGGER.info("TEST MENU BAR");
+        logger.info("TEST MENU BAR");
 
         ChessMenuBar menu = new ChessMenuBar();
 
-        LOGGER.info(""+menu);
+        logger.info(menu.toString());
         Assertions.assertNotNull(menu);
         
     }
@@ -89,16 +89,14 @@ public class test3 {
     @Test
     public void testViewMenuPanel(){
         
-        LOGGER.info("TEST MENU PANEL");
+        logger.info("TEST MENU PANEL");
 
         ChessPanel panel = new ChessPanel();
 
-        LOGGER.info(""+panel);
+        logger.info(panel.toString());
         Assertions.assertNotNull(panel);
         
     }
 
- 
-    
     
 }
